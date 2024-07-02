@@ -1,0 +1,392 @@
+.posSwipeLms {
+    background-color: #FFF;
+    padding-bottom: 245px;
+
+    @include tab {
+        padding-bottom: 130px;
+    }
+
+    @include mobile {
+        padding-bottom: 100px;
+    }
+
+    .swiper-container{
+        max-width: 1440px;
+        padding: 0;
+    }
+
+    .partners {
+        &_swiper {
+            padding: 267px 0 50px 0;
+            position: relative;
+
+            @include tab {
+                padding: 150px 0 50px 0;
+            }
+
+            @include mobile {
+                padding: 100px 0 50px 0;
+
+                .swiper-pagination {
+
+                    &.partners_pagination {
+                        display: none !important;
+                    }
+                }
+
+                .partners_btns {
+                    display: none !important;
+                }
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: 2;
+                height: 100%;
+                width: 100px;
+                left: -50px;
+                top: 0;
+                background-color: #FFF;
+
+                @include tab {
+                    width: 70px;
+                }
+
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+
+        &_swiper-items {
+            .partners_swiper-item {
+                background-color: #100E2D;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 60px 0 73px 0;
+                transform: rotate(-1.5deg);
+                border-radius: 32px;
+                width: 1295px;
+
+                @include tab {
+                    padding: 60px 30px 75px 30px;
+                }
+
+                @include mobile {
+                    transform: rotate(-2.5deg);
+                    padding: 50px 13px;
+                }
+            }
+        }
+
+        &_link {
+
+            @include tab {
+                picture {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            @include mobile {
+                picture {
+                    @include mobile {
+                        transform: rotate(2.5deg);
+                    }
+                }
+            }
+        }
+
+        &_pagination {
+            .swiper-pagination-bullet-active {
+                background-color: #100E2D;
+            }
+        }
+
+        &_btns {
+            bottom: -5px;
+            top: auto;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &_prev {
+            left: 46%;
+            transform: rotate(180deg);
+
+            @include tab {
+                left: 43%;
+            }
+        }
+
+        &_next {
+            right: 46%;
+
+            @include tab {
+                right: 43%;
+            }
+        }
+    }
+}
+
+.posSwipeLms_block {}
+
+.posSwipeLms_title {
+    color: #100E2D;
+    text-align: center;
+    font-family: "Unbounded-Medium";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @include tab {
+        font-size: 40px;
+    }
+    
+    @include mobile {
+        font-size: 29px;
+    }
+}
+
+.posSwipeLms_sides {
+    display: flex;
+    // align-items: center;
+    justify-content: start;
+    gap: 24px;
+    margin-top: 125px;
+    padding-bottom: 200px;
+
+    @include tab {
+        margin-top: 70px;
+        padding-bottom: 30px;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    @include mobile {
+        margin-top: 40px;
+        gap: 24px;
+    }
+}
+
+.posSwipeLms_L{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 80px 0;
+    width: calc(25% - 12px);
+
+    @include tab {
+        width: 100%;
+    }
+
+    .posSwipeLms_L_links{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 80px 0;
+
+        @include tab {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+}
+
+.posSwipeLms_L-btn {
+    color: #000;
+    font-family: "Unbounded-Medium";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @include tab {
+        font-size: 17px;
+    }
+
+    @include mobile {
+        font-size: 10px;
+    }
+
+    &:hover {
+        color: #B3C5FE !important;
+    }
+
+    &.active {
+        color: #B3C5FE !important;
+    }
+
+    @include tab {
+        &.frstLink {
+            color: #B3C5FE;
+        }
+    }
+}
+
+.posSwipeLms_R {
+    width: calc(75% - 12px);
+    display: flex;
+    flex-direction: column;
+    gap: 50px 0;
+
+    @include tab {
+        width: 100%;
+    }
+}
+
+.posSwipeLms_R-item {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 57px 34px 91px 60px;
+    background-color: #B3C5FE;
+    border-radius: 32px;
+    transform: rotate(1deg);
+    gap: 32px 0;
+    position: relative;
+
+    @include tab {
+        padding: 40px 30px 60px 50px;
+        gap: 25px 0;
+    }
+
+    @include mobile {
+        padding: 30px 40px;
+    }
+
+    .posSwipeLms_R-item__img {
+        position: absolute;
+        bottom: 52px;
+        right: 29px;
+        transform: rotate(-1deg);
+
+        @include tab {
+            width: 45%;
+            height: 45%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        @include mobile {
+            position: relative;
+            bottom: auto;
+            right: auto;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.blue{
+        background-color: #B3C5FE;
+    }
+
+    &.orange{
+        background-color: #EAC7DF;
+
+        @include tab {
+            display: none;
+        }
+    }
+
+    &.purple{
+        background-color: #C6B3FF;
+
+        @include tab {
+            display: none;
+        }
+    }
+
+    &.active {
+        display: flex !important;
+    }
+
+    &.disnone {
+        display: none !important;
+    }
+}
+
+.posSwipeLms_R-item__title {
+    color: #100E2D;
+    font-family: "Unbounded-Medium";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @include tab {
+        font-size: 26px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @include mobile {
+        font-size: 22px;
+    }
+}
+
+.posSwipeLms_R-item__lists {
+    display: flex;
+    flex-direction: column;
+    gap: 9px 0;
+    width: 50%;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.posSwipeLms_R-item__list {
+    color: #100E2D;
+    font-family: "GraphikRegular", "myriadProReg";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 8px;
+
+    @include tab {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    @include mobile {
+        line-height: 21px;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        min-width: 4px !important;
+        min-height: 4px !important;
+        background-color: #100E2D;
+        border-radius: 50%;
+        position: relative;
+        top: 10px;
+    }
+}

@@ -1,0 +1,503 @@
+.aboutUsHero {}
+
+.container {}
+
+.aboutUsHero_block {
+    padding: 135px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 240px 0;
+
+    @include tab {
+        padding: 100px 0;
+        gap: 100px;
+    }
+
+    @include mobile {
+        padding: 80px 0 100px 0;
+    }
+
+    .aboutUsHero_Info{
+        padding: 85px 77px 78px 80px;
+        position: relative;
+
+        @include tab {
+            padding: 40px 50px;
+            background-color: #100E2D;
+            border-radius: 40px;
+            transform: rotate(-0.5deg);
+        }
+
+        @include mobile {
+            padding: 30px;
+        }
+
+        .aboutUsHero_Info-texts{
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 32px 0;
+            transform: rotate(-0.5deg);
+
+            @include tab {
+                gap: 14px 0;
+            }
+
+            .aboutUsHero_Info-title{
+                color: #FFF;
+                font-family: "Unbounded-SemiBold";
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+
+                @include tab {
+                    font-size: 34px;
+                }
+            }
+            .aboutUsHero_Info-span{
+                color: #E7E7EA;
+                font-family: "GraphikRegular", "myriadProReg";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 27px;
+
+                @include tab {
+                    font-size: 18px;
+                }
+            }
+            .aboutUsHero_Info-P{
+                color: #FFF;
+                font-family: "GraphikSemibold", "myriadProSemibold";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 27px;
+
+                @include tab {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .aboutUsHero_Info-svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        @include tab {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: none;
+        }
+    }
+}
+
+.aboutUsHero_sides {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 265px 0;
+
+    @include tab {
+        gap: 150px 0;
+    }
+
+    @include mobile {
+        gap: 10px;
+    }
+}
+
+.aboutUsHero_T {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 0 20px;
+    position: relative;
+
+    @include mobile {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .mainTitle {
+        width: 55%;
+        padding-top: 45px;
+
+        @include tab {
+            font-size: 40px;
+        }
+
+        @include mobile {
+            font-size: 27px;
+            padding-top: 0;
+            width: 100%;
+        }
+    }
+
+    .aboutUsHero_T-pics {
+        position: absolute;
+        left: 770px;
+
+        @include tab {
+            left: 420px;
+
+            .aboutUsHeroImgPt02 {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        @include mobile {
+            position: relative;
+            left: 0;
+            display: flex;
+            justify-content: center;
+
+            .aboutUsHeroImgPt02 {
+                width: 90%;
+            }
+        }
+    }
+
+    .aboutUsHeroImgPt01 {
+        display: none;
+    }
+
+    .aboutUsHeroImgPt02 {
+        display: block;
+    }
+}
+.aboutUsHero_B {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+.aboutUsHero_B-pics {
+    position: relative;
+    min-height: 415px;
+    // right: 770px;
+    
+
+    @include tab {
+        width: 50%;
+    }
+
+    @include mobile {
+        width: 100%;
+        display: none;
+    }
+
+    .aboutUsHeroImgPt03 {
+        // display: none;
+        position: absolute;
+        left: 125px;
+        top: 0;
+
+        @include tab {
+            display: block;
+            width: 80%;
+            height: 100%;
+            left: 70px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        @include mobile {
+            width: 90%;
+            left: 30px;
+        }
+    }
+    
+    .aboutUsHeroImgPt04 {
+        // display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @include tab {
+            display: block;
+            width: 80%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        @include mobile {
+            width: 90%;
+        }
+    }
+    
+}
+.aboutUsHero_text {
+    width: 46%;
+    color: #888796;
+    font-family: "GraphikRegular", "myriadProReg";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+
+    @include tab {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    @include mobile {
+        width: 100%;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 86px;
+        height: 2px;
+        background-color: #100E2D;
+        position: relative;
+        top: 15px;
+    }
+
+    span {
+        font-family: "GraphikSemibold", "myriadProSemibold";
+        font-weight: 600;
+        color: #100E2D;
+        padding-left: 112px;
+    }
+}
+
+// aboutUs swiper
+
+.aboutUsSwiper {}
+
+.aboutUsSwiper_container {
+    max-width: 1440px;
+    padding: 0;
+    padding-bottom: 160px;
+
+    @include tab {
+        padding-bottom: 100px;
+    }
+}
+
+.aboutUsSwiper_block {
+
+    @include tab {
+        padding-bottom: 80px;
+    }
+
+    @include mobile {
+        padding-bottom: 0;
+    }
+
+    .aboutUsSwiper_pagination {
+        bottom: 10px;
+
+        .swiper-pagination-bullet {
+
+            @include mobile {
+                display: none;
+            }
+            &.swiper-pagination-bullet-active {
+                background-color: #100E2D;
+            }
+        }
+    }
+
+    .aboutUsSwiper_btns {
+        top: auto;
+        bottom: -3px;
+
+        @include mobile {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .aboutUsSwiper_prev {
+        left: 43%;
+        transform: rotate(180deg);
+
+        @include tab {
+            bottom: -4px;
+            left: 36%;
+        }
+    }
+
+    .aboutUsSwiper_next {
+        right: 43%;
+
+        @include tab {
+            bottom: -4px;
+            right: 36%;
+        }
+    }
+}
+
+.aboutUsSwiper-items {
+    padding: 0 0 115px 0;
+    align-items: end;
+
+    @include tab {
+        padding: 0;
+    }
+
+    .aboutUsSwiper-item {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px 0;
+        width: 196px !important;
+        margin-bottom: 158px;
+
+        @include tab {
+            gap: 16px 0;
+            width: 174px !important;
+            margin-bottom: 130px;
+        }
+
+        &.swiper-slide-active {
+            width: 416px !important;
+            height: 806px !important;
+            margin-bottom: 0;
+
+            @include tab {
+                width: 174px !important;
+                height: auto !important;
+                min-height: 475px !important;
+                margin-bottom: auto;
+            }
+            .aboutUsSwiper-item_T {
+
+                .aboutUsSwiper-item_pic01 {
+                    img {
+                        width: 416px;
+                        height: 660px;
+                        object-fit: cover;
+                        filter: grayscale(0%);
+
+                        @include tab {
+                            width: 174px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .aboutUsSwiper-item_B  {
+                display: flex;
+            }
+        }
+
+        .aboutUsSwiper-item_T {
+
+            .aboutUsSwiper-item_pic01 {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 196px;
+                    height: 312px;
+                    object-fit: contain;
+                    filter: grayscale(100%);
+
+                    @include tab {
+                        width: 174px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.aboutUsSwiper-item_B {
+    display: none;
+    flex-direction: column;
+
+    .aboutUsSwiper_Person-name {
+        color: #100E2D;
+        text-align: center;
+        font-family: "Unbounded-Medium";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @include tab {
+            font-size: 26px;
+        }
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+    
+    .aboutUsSwiper_Person-abbr {
+        color: #100E2D;
+        text-align: center;
+        font-family: "Unbounded-SemiBold";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 4px 0 16px 0;
+
+        @include tab {
+            font-size: 18px;
+            padding: 4px 0 10px 0;
+        }
+    }
+    
+    .aboutUsSwiper_Person-job {
+        color: #888796;
+        text-align: center;
+        font-family: "GraphikRegular", "myriadProReg";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+
+        @include tab {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}

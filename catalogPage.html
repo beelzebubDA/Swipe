@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Страница каталога</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="header catalogPageHeader">
+            <div class="container">
+                <div class="header_block">
+                    <div class="header_sides">
+                        <div class="header_L">
+                            <a href="#" class="header_logo">
+                                <picture class="header_L-logo">
+                                    <img src="./assets/imgs/Logobig.svg" alt="Logo" width="112" height="37">
+                                </picture>
+                            </a>
+                            <a href="#" class="header_menu mainLink">Меню</a>
+                        </div>
+                        <div class="header_R">
+                            <nav class="header_R-nav">
+                                <ul class="header_mob-menu">
+                                    <li>
+                                        <a href="#" class="header_mob-logo">
+                                            <picture class="header_L-logo">
+                                                <img src="./assets/imgs/Logobig.svg" alt="Logo" width="67" height="22">
+                                            </picture>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="header_mob-closeLink mainLink">Закрыть</a>
+                                    </li>
+                                </ul>
+                                <ul class="header_R-lists">
+                                    <li class="header_R-list">
+                                        <a href="#" class="header_R-link">Библиотека курсов</a>
+                                    </li>
+                                    <li class="header_R-list">
+                                        <a href="#" class="header_R-link">Кейсы</a>
+                                    </li>
+                                    <li class="header_R-list">
+                                        <a href="#" class="header_R-link">Тарифы</a>
+                                    </li>
+                                    <li class="header_R-list">
+                                        <a href="#" class="header_R-link">Блог</a>
+                                    </li>
+                                </ul>
+                                <ul class="header_mob-soc">
+                                    <li>
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M21.579 6.85483C21.719 6.38983 21.579 6.04883 20.917 6.04883H18.724C18.166 6.04883 17.911 6.34383 17.771 6.66783C17.771 6.66783 16.656 9.38683 15.076 11.1498C14.566 11.6628 14.333 11.8248 14.055 11.8248C13.916 11.8248 13.714 11.6628 13.714 11.1978V6.85483C13.714 6.29683 13.553 6.04883 13.088 6.04883H9.642C9.294 6.04883 9.084 6.30683 9.084 6.55283C9.084 7.08083 9.874 7.20283 9.955 8.69083V11.9188C9.955 12.6258 9.828 12.7548 9.548 12.7548C8.805 12.7548 6.997 10.0258 5.924 6.90183C5.715 6.29483 5.504 6.04983 4.944 6.04983H2.752C2.125 6.04983 2 6.34483 2 6.66883C2 7.25083 2.743 10.1308 5.461 13.9398C7.273 16.5408 9.824 17.9508 12.148 17.9508C13.541 17.9508 13.713 17.6378 13.713 17.0978V15.1318C13.713 14.5058 13.846 14.3798 14.287 14.3798C14.611 14.3798 15.169 14.5438 16.47 15.7968C17.956 17.2828 18.202 17.9498 19.037 17.9498H21.229C21.855 17.9498 22.168 17.6368 21.988 17.0188C21.791 16.4038 21.081 15.5088 20.139 14.4498C19.627 13.8458 18.862 13.1958 18.629 12.8708C18.304 12.4518 18.398 12.2668 18.629 11.8948C18.63 11.8958 21.301 8.13383 21.579 6.85483Z" fill="#F6F3F8" fill-opacity="0.79"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_764_765)">
+                                                  <path d="M10 0C7.28625 0 6.945 0.0125 5.87875 0.06C4.8125 0.11 4.08625 0.2775 3.45 0.525C2.78262 0.776024 2.17811 1.16978 1.67875 1.67875C1.1701 2.17837 0.776384 2.7828 0.525 3.45C0.2775 4.085 0.10875 4.8125 0.06 5.875C0.0125 6.94375 0 7.28375 0 10.0013C0 12.7163 0.0125 13.0563 0.06 14.1225C0.11 15.1875 0.2775 15.9137 0.525 16.55C0.78125 17.2075 1.1225 17.765 1.67875 18.3212C2.23375 18.8775 2.79125 19.22 3.44875 19.475C4.08625 19.7225 4.81125 19.8912 5.87625 19.94C6.94375 19.9875 7.28375 20 10 20C12.7163 20 13.055 19.9875 14.1225 19.94C15.1863 19.89 15.915 19.7225 16.5513 19.475C17.2182 19.2239 17.8223 18.8301 18.3212 18.3212C18.8775 17.765 19.2188 17.2075 19.475 16.55C19.7213 15.9137 19.89 15.1875 19.94 14.1225C19.9875 13.0563 20 12.7163 20 10C20 7.28375 19.9875 6.94375 19.94 5.87625C19.89 4.8125 19.7213 4.085 19.475 3.45C19.2237 2.78278 18.8299 2.17834 18.3212 1.67875C17.822 1.16959 17.2175 0.775807 16.55 0.525C15.9125 0.2775 15.185 0.10875 14.1213 0.06C13.0538 0.0125 12.715 0 9.9975 0H10.0013H10ZM9.10375 1.8025H10.0013C12.6713 1.8025 12.9875 1.81125 14.0413 1.86C15.0162 1.90375 15.5462 2.0675 15.8988 2.20375C16.365 2.385 16.6987 2.6025 17.0487 2.9525C17.3988 3.3025 17.615 3.635 17.7963 4.1025C17.9338 4.45375 18.0963 4.98375 18.14 5.95875C18.1887 7.0125 18.1987 7.32875 18.1987 9.9975C18.1987 12.6663 18.1887 12.9837 18.14 14.0375C18.0963 15.0125 17.9325 15.5413 17.7963 15.8938C17.6359 16.3279 17.38 16.7205 17.0475 17.0425C16.6975 17.3925 16.365 17.6088 15.8975 17.79C15.5475 17.9275 15.0175 18.09 14.0413 18.135C12.9875 18.1825 12.6713 18.1938 10.0013 18.1938C7.33125 18.1938 7.01375 18.1825 5.96 18.135C4.985 18.09 4.45625 17.9275 4.10375 17.79C3.66937 17.6299 3.27641 17.3745 2.95375 17.0425C2.62094 16.72 2.36465 16.3271 2.20375 15.8925C2.0675 15.5412 1.90375 15.0113 1.86 14.0363C1.8125 12.9825 1.8025 12.6663 1.8025 9.995C1.8025 7.325 1.8125 7.01 1.86 5.95625C1.905 4.98125 2.0675 4.45125 2.205 4.09875C2.38625 3.6325 2.60375 3.29875 2.95375 2.94875C3.30375 2.59875 3.63625 2.3825 4.10375 2.20125C4.45625 2.06375 4.985 1.90125 5.96 1.85625C6.8825 1.81375 7.24 1.80125 9.10375 1.8V1.8025ZM15.3387 3.4625C15.1812 3.4625 15.0251 3.49354 14.8795 3.55384C14.7339 3.61415 14.6017 3.70254 14.4902 3.81397C14.3788 3.9254 14.2904 4.05769 14.2301 4.20328C14.1698 4.34887 14.1388 4.50491 14.1388 4.6625C14.1388 4.82009 14.1698 4.97613 14.2301 5.12172C14.2904 5.26731 14.3788 5.3996 14.4902 5.51103C14.6017 5.62246 14.7339 5.71085 14.8795 5.77116C15.0251 5.83146 15.1812 5.8625 15.3387 5.8625C15.657 5.8625 15.9622 5.73607 16.1873 5.51103C16.4123 5.28598 16.5387 4.98076 16.5387 4.6625C16.5387 4.34424 16.4123 4.03902 16.1873 3.81397C15.9622 3.58893 15.657 3.4625 15.3387 3.4625ZM10.0013 4.865C9.32009 4.85437 8.64362 4.97936 8.01122 5.23268C7.37883 5.486 6.80314 5.86259 6.31769 6.34053C5.83223 6.81847 5.4467 7.38821 5.18355 8.01657C4.9204 8.64494 4.78488 9.31938 4.78488 10.0006C4.78488 10.6819 4.9204 11.3563 5.18355 11.9847C5.4467 12.613 5.83223 13.1828 6.31769 13.6607C6.80314 14.1387 7.37883 14.5153 8.01122 14.7686C8.64362 15.0219 9.32009 15.1469 10.0013 15.1363C11.3494 15.1152 12.6353 14.5649 13.5812 13.6041C14.5272 12.6432 15.0574 11.349 15.0574 10.0006C15.0574 8.65228 14.5272 7.35802 13.5812 6.39719C12.6353 5.43636 11.3494 4.88603 10.0013 4.865ZM10.0013 6.66625C10.8854 6.66625 11.7334 7.01748 12.3586 7.64268C12.9838 8.26788 13.335 9.11583 13.335 10C13.335 10.8842 12.9838 11.7321 12.3586 12.3573C11.7334 12.9825 10.8854 13.3337 10.0013 13.3337C9.11709 13.3337 8.26913 12.9825 7.64393 12.3573C7.01873 11.7321 6.6675 10.8842 6.6675 10C6.6675 9.11583 7.01873 8.26788 7.64393 7.64268C8.26913 7.01748 9.11709 6.66625 10.0013 6.66625Z" fill="#F6F3F8" fill-opacity="0.79"/>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_764_765">
+                                                    <rect width="20" height="20" fill="white"/>
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="#F6F3F8" fill-opacity="0.79"/>
+                                              </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                <g clip-path="url(#clip0_764_1189)">
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1288 4.0608C18.3553 3.96546 18.6032 3.93258 18.8468 3.96558C19.0903 3.99857 19.3206 4.09625 19.5136 4.24843C19.7065 4.40061 19.8552 4.60174 19.9441 4.83088C20.033 5.06002 20.0588 5.30879 20.0189 5.5513L17.9399 18.1619C17.7383 19.3783 16.4036 20.0759 15.288 19.47C14.3548 18.9631 12.9688 18.1821 11.7222 17.3671C11.0988 16.9592 9.18943 15.653 9.42409 14.7235C9.62576 13.9287 12.8341 10.9422 14.6674 9.16663C15.387 8.46905 15.0588 8.06663 14.2091 8.7083C12.098 10.3015 8.71093 12.7242 7.59076 13.4062C6.60259 14.0076 6.08743 14.1102 5.47143 14.0076C4.34759 13.8206 3.30534 13.5309 2.45468 13.178C1.30518 12.7013 1.3611 11.121 2.45376 10.6608L18.1288 4.0608Z" fill="#F6F3F8" fill-opacity="0.79"/>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_764_1189">
+                                                    <rect width="22" height="22" fill="white"/>
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="header_mob-span"><span></span> © 2023 ООО “SwipeLMS”</span>
+                            </nav>
+
+                            <a href="#" class="header_TryNow mainLink">
+                                <span class="header_TryNow-span01">Попробовать сейчас</span>
+                                <span class="header_TryNow-span02">Попробовать</span>
+                                <picture class="arrowWhite">
+                                    <img src="./assets/imgs/arrowWhite.svg" alt="arrow white" width="18" height="18">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="aboutCourse">
+                <div class="container">
+                    <div class="aboutCourse_block">
+                        <a href="#" class="toPrevPage">
+                            <svg class="svg01" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6654 9.16683H6.5237L11.182 4.5085L9.9987 3.3335L3.33203 10.0002L9.9987 16.6668L11.1737 15.4918L6.5237 10.8335H16.6654V9.16683Z" fill="#706E81"/>
+                            </svg>
+                            <svg class="svg02" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6666 9.16668H6.52492L11.1833 4.50834L9.99992 3.33334L3.33325 10L9.99992 16.6667L11.1749 15.4917L6.52492 10.8333H16.6666V9.16668Z" fill="url(#paint0_linear_125_518)"/>
+                                <defs>
+                                  <linearGradient id="paint0_linear_125_518" x1="3.33325" y1="10" x2="16.448" y2="10" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#5F53BE"/>
+                                    <stop offset="0.190555" stop-color="#905AA8"/>
+                                    <stop offset="0.398202" stop-color="#D2638D"/>
+                                    <stop offset="0.671768" stop-color="#DF8D84"/>
+                                    <stop offset="0.86623" stop-color="#E29A82"/>
+                                    <stop offset="1" stop-color="#E9C07D"/>
+                                  </linearGradient>
+                                </defs>
+                            </svg>
+                            <span>к списку курсов</span>
+                        </a>
+                        <div class="aboutCourse_Main">
+                            <div class="aboutCourse_item">
+                                <div class="aboutCourse_item-L">
+                                    <h1 class="mainTitle">Эмоциональные ловушки в переговорах</h1>
+                                    <p class="mainSubTitle">Переговоры — часть нашей жизни. И зачастую их процесс и результаты зависят не от того, насколько убедительны вы были в ходе общения, а от того, насколько сильное влияние на вас оказали эмоции.</p>
+                                    <a href="#" class="mainLink modalOpenBtn">
+                                        <span>Получить курс</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M4 13H16.17L10.58 18.59L12 20L20 12L12 4L10.59 5.41L16.17 11H4V13Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="aboutCourse_item-R">
+                                    <div class="aboutCourse_item-picB">
+                                        <picture class="aboutCourse_item-img">
+                                            <img src="./assets/imgs/aboutCourseImg01.png" alt="hands">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aboutCourse_Info-items">
+                            <div class="aboutCourse_Info-item">
+                                <div class="aboutCourse_Info-item_L">
+                                    <picture class="aboutCourse_InfoImg">
+                                        <img src="./assets/imgs/aboutCourseInfoImg01.png" alt="about course images 01" width="220" height="182">
+                                    </picture>
+                                    <span class="aboutCourse_Info-item_L-span">Для кого этот курс?</span>
+                                    <span class="aboutCourse_Info-item_L-text">Руководители, тимлиды и менеджеры подразделений, линейные сотрудники, в особенности работающие с  клиентами и партнёрами по бизнесу.</span>
+                                    <svg class="aboutCourse_Info-svg" xmlns="http://www.w3.org/2000/svg" width="416" height="385" viewBox="0 0 416 385" fill="none">
+                                        <path d="M6.97394 39.4839C7.42287 17.5964 25.3834 0.136084 47.2748 0.305354L369.763 2.79891C391.436 2.96649 409.033 20.3642 409.447 42.0335L415.211 343.693C415.642 366.287 397.285 384.753 374.689 384.454L40.2891 380.033C18.0857 379.739 0.370903 361.417 0.826252 339.216L6.97394 39.4839Z" fill="#100E2D"/>
+                                    </svg>
+                                </div>
+                                <div class="aboutCourse_Info-item_R">
+                                    <h3 class="aboutCourse_Info-title">Какие проблемы решает курс</h3>
+                                    <h6 class="aboutCourse_Info-subtitle">Конфликты на рабочем месте:</h6>
+                                    <ul class="aboutCourse_Info-lists">
+                                        <li class="aboutCourse_Info-list">негативно влияют на отношения в коллективе;</li>
+                                        <li class="aboutCourse_Info-list">снижают продуктивность;</li>
+                                        <li class="aboutCourse_Info-list">отнимают время и силы на регулирование, когда это время можно использовать<br> более эффективно.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="aboutCourse_Info-item scndInfoItem">
+                                <div class="aboutCourse_Info-item_L">
+                                    <picture class="aboutCourse_InfoImg">
+                                        <img src="./assets/imgs/aboutCourseInfoImg02.png" alt="about course images 01" width="324" height="222">
+                                    </picture>
+                                    <svg class="aboutCourse_Info-svg" xmlns="http://www.w3.org/2000/svg" width="416" height="385" viewBox="0 0 416 385" fill="none">
+                                        <path d="M409.026 39.4839C408.577 17.5964 390.617 0.136084 368.725 0.305354L46.2368 2.79891C24.5641 2.96649 6.96741 20.3642 6.55338 42.0335L0.789276 343.693C0.357574 366.287 18.7147 384.753 41.3108 384.454L375.711 380.033C397.914 379.739 415.629 361.417 415.174 339.216L409.026 39.4839Z" fill="#C6B3FF"/>
+                                    </svg>
+                                </div>
+                                <div class="aboutCourse_Info-item_R">
+                                    <h3 class="aboutCourse_Info-title">Какой результат получите в итоге</h3>
+                                    <h6 class="aboutCourse_Info-subtitle">Научитесь распознавать конфликты.</h6>
+                                    <h6 class="aboutCourse_Info-subtitle">Научитесь понимать причины конфликтов.</h6>
+                                    <h6 class="aboutCourse_Info-subtitle">Узнаете, как реагировать на конфликты так, чтобы сохранить свои нервы и энергию при общении даже с самыми
+                                        «непростыми» собеседниками. </h6>
+                                    <h6 class="aboutCourse_Info-subtitle">Получите практические инструменты, которые помогут снизить риски попадания в конфликтную ситуацию.</h6>
+                                </div>
+                            </div>
+                            <div class="aboutCourse_Info-item thirthInfoItem">
+                                <div class="aboutCourse_Info-item_L">
+                                    <picture class="aboutCourse_InfoImg">
+                                        <img src="./assets/imgs/aboutCourseInfoImg03.png" alt="about course images 01" width="301" height="297">
+                                    </picture>
+                                    <svg class="aboutCourse_Info-svg" xmlns="http://www.w3.org/2000/svg" width="416" height="385" viewBox="0 0 416 385" fill="none">
+                                        <path d="M6.97394 39.4839C7.42287 17.5964 25.3834 0.136084 47.2748 0.305354L369.763 2.79891C391.436 2.96649 409.033 20.3642 409.447 42.0335L415.211 343.693C415.642 366.287 397.285 384.753 374.689 384.454L40.2891 380.033C18.0857 379.739 0.370903 361.417 0.826252 339.216L6.97394 39.4839Z" fill="#100E2D"/>
+                                    </svg>
+                                </div>
+                                <div class="aboutCourse_Info-item_R">
+                                    <h3 class="aboutCourse_Info-title">Какой результат получите в итоге</h3>
+                                    <h6 class="aboutCourse_Info-subtitle">Как развиваются конфликты?</h6>
+                                    <h6 class="aboutCourse_Info-subtitle">Что может вызвать конфликт</h6>
+                                    <h6 class="aboutCourse_Info-subtitle">Правила бесконфликтного общения</h6>
+                                    <h6 class="aboutCourse_Info-subtitle">Тест-урок: хороши ли в разрешении конфликтов?</h6>
+                                </div>
+                            </div>
+                            <div class="courseExpert">
+                                <h6 class="courseExpert_title">Эксперт курса</h6>
+                                <div class="courseExpert_block">
+                                    <div class="courseExpert_Pic">
+                                        <picture class="courseExpert_img">
+                                            <img src="./assets/imgs/courseExpert01.png" alt="course expert image" width="212" height="212">
+                                        </picture>
+                                        <span class="courseExpert_Pic-bj"></span>
+                                    </div>
+                                    <div class="courseExpert_text">
+                                        <span class="courseExpert_text-name">Дмитрий Исмагулов</span>
+                                        <p class="courseExpert_text-p">Управляющий партнёр компании BusinessTools c 25+ летним опытом 25+ лет проведения обучения взрослых людей по направлениям «Менеджмент» и «Продажи».</p>
+                                    </div>
+                                </div>
+                                <svg class="courseExpert_svg" xmlns="http://www.w3.org/2000/svg" width="1293" height="461" viewBox="0 0 1293 461" fill="none">
+                                    <path d="M1276.68 38.4633C1275.74 16.987 1258 0.0940876 1236.5 0.213041L48.8682 6.78492C27.2239 6.90469 9.60132 24.2196 9.10034 45.8584L0.458618 419.097C-0.0653076 441.727 18.2769 460.283 40.9111 460.02L1253.2 445.978C1275.79 445.717 1293.68 426.806 1292.69 404.232L1276.68 38.4633Z" fill="#100E2D"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demoVer">
+                <div class="container">
+                    <div class="demoVer_block">
+                        <div class="demoVer_sides">
+                            <div class="demoVer_L">
+                                <h4 class="demoVer_L-title">Получить<br> демо версию</h4>
+                                <p class="demoVer_L-text">Хотите попробовать данный курс и не только со своей командой, оставьте заявку на демо неделю и мы с вами подберем несколько курсов под решение задач в вашем бизнесе</p>
+                            </div>
+                            <div class="demoVer_R">
+                                <form class="demoVer_form" method="post">
+                                    <div class="demoVer_form-items">
+                                        <div class="demoVer_form-T">
+                                            <div class="demoVer_form-item">
+                                                <input type="text" name="companyName" id="" class="companyName" placeholder="Название компании">
+                                            </div>
+                                            <div class="demoVer_form-item">
+                                                <input type="text" name="youName" id="" class="youName" placeholder="Ваше имя">
+                                            </div>
+                                            <div class="demoVer_form-item">
+                                                <select class="aboutComp" name="aboutComp">
+                                                    <option data-display="Чем занимается компания">Ничем</option>
+                                                    <option value="1">Чем-то</option>
+                                                    <option value="2">Я не знаю</option>
+                                                </select>
+                                            </div>
+                                            <div class="demoVer_form-item">
+                                                <input type="email" name="youMail" id="" class="youMail" placeholder="Email">
+                                            </div>
+                                            <div class="demoVer_form-item">
+                                                <select class="yourInterest" name="yourInterest">
+                                                    <option data-display="Какие темы интересуют">Ничем</option>
+                                                    <option value="1">Чем-то</option>
+                                                    <option value="2">Я не знаю</option>
+                                                </select>
+                                            </div>
+                                            <div class="demoVer_form-item telAndCountry">
+                                                <select class="countrySelect" name="countrySelect">
+                                                    <option value="russia"></option>
+                                                    <option value="kz"></option>
+                                                    <option value="belarus"></option>
+                                                </select>
+                                                <input type="text" class="yourTel" placeholder="+7 (999) 999-99-99" value="+7 (999) 999-99-99">
+                                            </div>
+                                        </div>
+                                        <div class="demoVer_form-B">
+                                            <button class="demoVer_btn mainLink">
+                                                Отправить
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+                                                    <path d="M3.80957 11.7825L13.9497 11.9595L9.21076 16.5358L10.3734 17.7313L17.1554 11.182L10.6061 4.4L9.41078 5.55432L13.9788 10.2931L3.83865 10.1161L3.80957 11.7825Z" fill="white"/>
+                                                </svg>
+                                            </button>
+                                            <label class="demoVer_form-label">
+                                                <input type="checkbox" name="termsOfUse" id="" class="inputCheck">
+                                                <span class="spanCheckbox"></span>
+                                                <span class="demoVer_form-label__span">Я согласен с</span>
+                                                <a class="demoVer_form-label__link" href="#">Пользовательским соглашением</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <svg class="demoVer_svg" xmlns="http://www.w3.org/2000/svg" width="1290" height="463" viewBox="0 0 1290 463" fill="none">
+                            <path d="M20.0742 38.3997C21.2474 16.9522 39.1502 0.260072 60.6272 0.589108L1246.94 18.7638C1268.65 19.0964 1286.13 36.6856 1286.33 58.3959L1289.63 421.974C1289.83 444.462 1271.46 462.698 1248.98 462.332L39.5589 442.632C16.869 442.262 -0.969281 423.111 0.270158 400.452L20.0742 38.3997Z" fill="#C6B3FF"/>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_block">
+                    <div class="footer_T">
+                        <div class="footer_T-sides">
+                            <div class="footer_T-L">
+                                <a href="#" class="footer_T-link">
+                                    <picture class="footer-Logo">
+                                        <img src="./assets/imgs/Logobig.svg" alt="footer logo" width="216" height="71">
+                                    </picture>
+                            </a>
+                            </div>
+                            <div class="footer_T-R">
+                                <div class="footer_T-item">
+                                    <a href="#" class="footer_T-mainLink">Продукт</a>
+                                    <nav class="footer_T-nav">
+                                        <ul class="footer_T-lists">
+                                            <li class="footer_T-list"><a href="#">Библиотека курсов</a></li>
+                                            <li class="footer_T-list"><a href="#">Тарифы</a></li>
+                                            <li class="footer_T-list"><a href="#">Кейсы</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="footer_T-item">
+                                    <a href="#" class="footer_T-mainLink">Компания</a>
+                                    <nav class="footer_T-nav">
+                                        <ul class="footer_T-lists">
+                                            <li class="footer_T-list"><a href="#">О нас</a></li>
+                                            <li class="footer_T-list"><a href="#">Блог</a></li>
+                                            <li class="footer_T-list"><a href="#">Контакты</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="footer_T-item">
+                                    <a href="#" class="footer_T-mainLink">Дополнительно</a>
+                                    <nav class="footer_T-nav">
+                                        <ul class="footer_T-lists">
+                                            <li class="footer_T-list"><a href="#">Политика конфиденциальности</a></li>
+                                            <li class="footer_T-list"><a href="#">Пользовательское соглашение</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_C">
+                        <div class="footer_C-sides">
+                            <div class="footer_C-L">
+                                <a href="#" class="footer_C-link mainLink">
+                                    <span>Подписаться на рассылку</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M3.33464 10.8334H13.4763L8.81797 15.4917L10.0013 16.6667L16.668 10.0001L10.0013 3.33342L8.8263 4.50842L13.4763 9.16675H3.33464V10.8334Z" fill="#F6F3F8C9"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="footer_C-R">
+                                <a href="#" class="footer_C-link mainLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21.579 6.855C21.719 6.39 21.579 6.049 20.917 6.049H18.724C18.166 6.049 17.911 6.344 17.771 6.668C17.771 6.668 16.656 9.387 15.076 11.15C14.566 11.663 14.333 11.825 14.055 11.825C13.916 11.825 13.714 11.663 13.714 11.198V6.855C13.714 6.297 13.553 6.049 13.088 6.049H9.642C9.294 6.049 9.084 6.307 9.084 6.553C9.084 7.081 9.874 7.203 9.955 8.691V11.919C9.955 12.626 9.828 12.755 9.548 12.755C8.805 12.755 6.997 10.026 5.924 6.902C5.715 6.295 5.504 6.05 4.944 6.05H2.752C2.125 6.05 2 6.345 2 6.669C2 7.251 2.743 10.131 5.461 13.94C7.273 16.541 9.824 17.951 12.148 17.951C13.541 17.951 13.713 17.638 13.713 17.098V15.132C13.713 14.506 13.846 14.38 14.287 14.38C14.611 14.38 15.169 14.544 16.47 15.797C17.956 17.283 18.202 17.95 19.037 17.95H21.229C21.855 17.95 22.168 17.637 21.988 17.019C21.791 16.404 21.081 15.509 20.139 14.45C19.627 13.846 18.862 13.196 18.629 12.871C18.304 12.452 18.398 12.267 18.629 11.895C18.63 11.896 21.301 8.134 21.579 6.855Z" fill="#F0F0F2"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer_C-link mainLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <g clip-path="url(#clip0_8_10673)">
+                                          <path d="M10 0C7.28625 0 6.945 0.0125 5.87875 0.06C4.8125 0.11 4.08625 0.2775 3.45 0.525C2.78262 0.776024 2.17811 1.16978 1.67875 1.67875C1.1701 2.17837 0.776384 2.7828 0.525 3.45C0.2775 4.085 0.10875 4.8125 0.06 5.875C0.0125 6.94375 0 7.28375 0 10.0013C0 12.7163 0.0125 13.0563 0.06 14.1225C0.11 15.1875 0.2775 15.9137 0.525 16.55C0.78125 17.2075 1.1225 17.765 1.67875 18.3212C2.23375 18.8775 2.79125 19.22 3.44875 19.475C4.08625 19.7225 4.81125 19.8912 5.87625 19.94C6.94375 19.9875 7.28375 20 10 20C12.7163 20 13.055 19.9875 14.1225 19.94C15.1863 19.89 15.915 19.7225 16.5513 19.475C17.2182 19.2239 17.8223 18.8301 18.3212 18.3212C18.8775 17.765 19.2188 17.2075 19.475 16.55C19.7213 15.9137 19.89 15.1875 19.94 14.1225C19.9875 13.0563 20 12.7163 20 10C20 7.28375 19.9875 6.94375 19.94 5.87625C19.89 4.8125 19.7213 4.085 19.475 3.45C19.2237 2.78278 18.8299 2.17834 18.3212 1.67875C17.822 1.16959 17.2175 0.775807 16.55 0.525C15.9125 0.2775 15.185 0.10875 14.1213 0.06C13.0538 0.0125 12.715 0 9.9975 0H10.0013H10ZM9.10375 1.8025H10.0013C12.6713 1.8025 12.9875 1.81125 14.0413 1.86C15.0162 1.90375 15.5462 2.0675 15.8988 2.20375C16.365 2.385 16.6987 2.6025 17.0487 2.9525C17.3988 3.3025 17.615 3.635 17.7963 4.1025C17.9338 4.45375 18.0963 4.98375 18.14 5.95875C18.1887 7.0125 18.1987 7.32875 18.1987 9.9975C18.1987 12.6663 18.1887 12.9837 18.14 14.0375C18.0963 15.0125 17.9325 15.5413 17.7963 15.8938C17.6359 16.3279 17.38 16.7205 17.0475 17.0425C16.6975 17.3925 16.365 17.6088 15.8975 17.79C15.5475 17.9275 15.0175 18.09 14.0413 18.135C12.9875 18.1825 12.6713 18.1938 10.0013 18.1938C7.33125 18.1938 7.01375 18.1825 5.96 18.135C4.985 18.09 4.45625 17.9275 4.10375 17.79C3.66937 17.6299 3.27641 17.3745 2.95375 17.0425C2.62094 16.72 2.36465 16.3271 2.20375 15.8925C2.0675 15.5412 1.90375 15.0113 1.86 14.0363C1.8125 12.9825 1.8025 12.6663 1.8025 9.995C1.8025 7.325 1.8125 7.01 1.86 5.95625C1.905 4.98125 2.0675 4.45125 2.205 4.09875C2.38625 3.6325 2.60375 3.29875 2.95375 2.94875C3.30375 2.59875 3.63625 2.3825 4.10375 2.20125C4.45625 2.06375 4.985 1.90125 5.96 1.85625C6.8825 1.81375 7.24 1.80125 9.10375 1.8V1.8025ZM15.3387 3.4625C15.1812 3.4625 15.0251 3.49354 14.8795 3.55384C14.7339 3.61415 14.6017 3.70254 14.4902 3.81397C14.3788 3.9254 14.2904 4.05769 14.2301 4.20328C14.1698 4.34887 14.1388 4.50491 14.1388 4.6625C14.1388 4.82009 14.1698 4.97613 14.2301 5.12172C14.2904 5.26731 14.3788 5.3996 14.4902 5.51103C14.6017 5.62246 14.7339 5.71085 14.8795 5.77116C15.0251 5.83146 15.1812 5.8625 15.3387 5.8625C15.657 5.8625 15.9622 5.73607 16.1873 5.51103C16.4123 5.28598 16.5387 4.98076 16.5387 4.6625C16.5387 4.34424 16.4123 4.03902 16.1873 3.81397C15.9622 3.58893 15.657 3.4625 15.3387 3.4625ZM10.0013 4.865C9.32009 4.85437 8.64362 4.97936 8.01122 5.23268C7.37883 5.486 6.80314 5.86259 6.31769 6.34053C5.83223 6.81847 5.4467 7.38821 5.18355 8.01657C4.9204 8.64494 4.78488 9.31938 4.78488 10.0006C4.78488 10.6819 4.9204 11.3563 5.18355 11.9847C5.4467 12.613 5.83223 13.1828 6.31769 13.6607C6.80314 14.1387 7.37883 14.5153 8.01122 14.7686C8.64362 15.0219 9.32009 15.1469 10.0013 15.1363C11.3494 15.1152 12.6353 14.5649 13.5812 13.6041C14.5272 12.6432 15.0574 11.349 15.0574 10.0006C15.0574 8.65228 14.5272 7.35802 13.5812 6.39719C12.6353 5.43636 11.3494 4.88603 10.0013 4.865ZM10.0013 6.66625C10.8854 6.66625 11.7334 7.01748 12.3586 7.64268C12.9838 8.26788 13.335 9.11583 13.335 10C13.335 10.8842 12.9838 11.7321 12.3586 12.3573C11.7334 12.9825 10.8854 13.3337 10.0013 13.3337C9.11709 13.3337 8.26913 12.9825 7.64393 12.3573C7.01873 11.7321 6.6675 10.8842 6.6675 10C6.6675 9.11583 7.01873 8.26788 7.64393 7.64268C8.26913 7.01748 9.11709 6.66625 10.0013 6.66625Z" fill="#F0F0F2"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8_10673">
+                                            <rect width="20" height="20" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer_C-link mainLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="#F0F0F2"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer_C-link mainLink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                        <g clip-path="url(#clip0_8_10658)">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1289 4.06083C18.3554 3.96549 18.6033 3.93261 18.8469 3.96561C19.0904 3.9986 19.3207 4.09628 19.5137 4.24846C19.7067 4.40064 19.8553 4.60177 19.9442 4.83091C20.0331 5.06005 20.0589 5.30882 20.019 5.55133L17.94 18.1619C17.7384 19.3783 16.4037 20.0759 15.2881 19.47C14.355 18.9631 12.969 18.1821 11.7223 17.3672C11.099 16.9592 9.18955 15.653 9.42422 14.7235C9.62588 13.9287 12.8342 10.9422 14.6675 9.16667C15.3871 8.46908 15.059 8.06667 14.2092 8.70833C12.0981 10.3015 8.71105 12.7242 7.59088 13.4062C6.60272 14.0076 6.08755 14.1102 5.47155 14.0076C4.34772 13.8206 3.30547 13.5309 2.4548 13.178C1.3053 12.7013 1.36122 11.121 2.45388 10.6608L18.1289 4.06083Z" fill="#F0F0F2"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8_10658">
+                                            <rect width="22" height="22" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_B">
+                        <div class="footer_B-sides">
+                            <div class="footer_B-L">
+                                <span class="copyright">© 2023 ООО “SwipeLMS”</span>
+                            </div>
+                            <div class="footer_B-R">
+                                <a href="#" class="footer_B-link">
+                                    <picture>
+                                        <img src="./assets/imgs/appStore.svg" alt="app store">
+                                    </picture>
+                                </a>
+                                <a href="#" class="footer_B-link">
+                                    <picture>
+                                        <img src="./assets/imgs/googlePlay.svg" alt="google play">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div id="openModal" class="modal_block">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Название</h3>
+                        <a href="#close" title="Close" class="modal_close">×</a>
+                    </div>
+                    <div class="modal-body">    
+                        <p>Содержимое модального окна...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="./assets/js/jQuery-3.7.1.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

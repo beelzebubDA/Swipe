@@ -1,0 +1,197 @@
+.IndSol {
+    display: block;
+    margin-top: 310px;
+    background-color: #FFF;
+    border-radius: 75px 75px 0 0;
+
+    @include tab {
+        margin-top: 250px;
+    }
+
+    @include mobile {
+        margin-top: 100px;
+        border-radius: 60px 60px 0 0;
+    }
+
+    .IndSol_block {
+        padding: 100px 0 300px 0;
+        position: relative;
+
+        @include tab {
+            padding: 100px 0 150px 0;
+        }
+
+        @include mobile {
+            padding: 100px 0 250px 0;
+        }
+
+        .IndSol-pic{
+            position: absolute;
+            top: -296px;
+            right: 0;
+
+            @include tab {
+                width: 40%;
+                height: 15%;
+                top: -170px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            @include tabD {
+                width: 45%;
+                height: 25%;
+                top: -180px;
+            }
+
+            @include mobile {
+                top: -125px;
+            }
+        }
+    }
+
+    .IndSol_title {
+        color:#100E2D;
+        font-family: "Unbounded-Medium";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+
+        @include tab {
+            font-size: 40px;
+        }
+
+        @include mobile {
+            font-size: 27px;
+        }
+    }
+
+    .IndSol_items {
+        padding-top: 180px;
+        display: flex;
+        gap: 100px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-height: 705px;
+
+        @include tab {
+            padding-top: 40px;
+        }
+
+        @include mobile {
+            padding-top: 200px;
+            min-height: 480px;
+        }
+
+        .IndSol_item {
+            width: 526px;
+            height: 705px;
+            transform: rotate(-2.3deg);
+            flex-shrink: 0;
+            border-radius: 40px;
+            background: #C6B3FF;
+            position: absolute;
+
+            @include tab {
+                width: 470px;
+                height: 580px;
+            }
+
+            @include mobile {
+                width: 366px;
+                height: 480px;
+
+                picture {
+                    display: block;
+                    width: 100%;
+                    height: 42%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .IndSol_item-B {
+                    padding: 30px 40px 21px 40px !important;
+                }
+            }
+
+            &.blue{
+                background-color: #B3C5FE;
+                transform: rotate(-11.506deg);
+            }
+
+            &.orange {
+                background-color: #EAC7DF;
+                transform: rotate(-7.683deg);
+            }
+
+            .IndSol_item-B{
+                padding: 33px 44px 44px 55px;
+            }
+        }
+    }
+
+    .IndSol_item-title {
+        color: #100E2D;
+        font-family: "Unbounded-SemiBold";
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        @include mobile {
+            font-size: 22px;
+        }
+    }
+
+    .IndSol_item-text {
+        color:#100E2D;
+        font-family: "GraphikRegular", "myriadProReg";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 31px;
+        display: block;
+        padding: 32px 0 149px 0;
+
+        @include tab {
+            font-size: 20px;
+            line-height: 27px;
+            padding: 15px 0 60px 0;
+        }
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 21px;
+            width: 90%;
+        }
+    }
+
+    .IndSol_item-link {
+        &.mainLink{
+            padding: 12px 24px;
+            font-family: "GraphikMedium", "myriadProSemibold";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    .mainLink {}
+}

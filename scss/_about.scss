@@ -1,0 +1,210 @@
+.about {
+    &_block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 240px;
+
+        @include tab {
+            padding-bottom: 150px;
+        }
+
+        @include mobile {
+            padding-bottom: 100px;
+        }
+    }
+
+    &_item {
+        background-color: #100E2D;
+        transform: rotate(-2.384deg);
+        border-radius: 20px;
+        position: relative;
+        padding: 55px 72px 72px 280px;
+        margin: 209px 0 291px 0;
+        max-width: 974px;
+
+        @include tab {
+            margin: 150px 0 170px 0;
+            padding: 35px 35px 50px 400px;
+        }
+
+        @include mobile {
+            margin: 350px 0 100px 0;
+            padding: 210px 35px 50px 35px;
+            transform: rotate(-0.9deg);
+        }
+    }
+
+    &_title {
+        color:#FFF;
+        font-family: "Unbounded-SemiBold";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        @include tab {
+            font-size: 30px;
+        }
+
+        @include mobile {
+            font-size: 22px;
+            font-weight: 500;
+            font-family: "Unbounded-Medium";
+        }
+    }
+
+    &_text {
+        color:#E7E7EA;
+        font-family: "GraphikRegular", "myriadProReg";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        padding: 24px 0 94px 0;
+
+        @include tab {
+            font-size: 18px;
+            line-height: 25px;
+            padding: 20px 0 40px 0;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include mobile{
+            line-height: 26px;
+            padding: 24px 0 50px 0;
+        }
+    }
+
+    &_link {
+        
+        &.mainLink {
+            border-radius: 100px;
+            background: #EAC7DF;
+            color: #100E2D;
+            padding: 12px 24px;
+
+            @include mobile {
+                width: 100%;
+            }
+
+            &:hover {
+                color: #FFF;
+
+                svg {
+                    path {
+                        fill: #FFF;
+                    }
+                }
+            }
+        }
+
+        .about_link-span01 {
+            display: block;
+
+            @include mobile {
+                display: none;
+            }
+        }
+        .about_link-span02 {
+            display: none;
+
+            @include mobile {
+                display: block;
+            }
+        }
+    }
+
+    &_item-pic {
+        position: absolute;
+        bottom: -65px;
+        left: -195px;
+        transform: rotate(2.384deg);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @include tab {
+            bottom: -30px;
+            left: -48px;
+            width: 60%;
+        }
+
+        @include mobile {
+            width: 100%;
+            bottom: auto;
+            top: -58%;
+            left: 0%;
+        }
+    }
+
+    .about {
+        &_B {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 52px 0;
+
+            @include tab {
+                gap: 25px 0;
+            }
+
+            @include mobile {
+                gap: 32px 0;
+            }
+        }
+
+        &_B-title {
+            color: #100E2D;
+            text-align: center;
+            font-family: "Unbounded-Medium";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            @include tab {
+                font-size: 32px;
+            }
+
+            @include mobile {
+                font-size: 27px;
+                line-height: 37px;
+                font-weight: 600;
+                font-family: "Unbounded-SemiBold";
+            }
+
+            span {
+                color: #C6B3FF;
+            }
+        }
+
+        &_B-subtitle {
+            color: #706E81;
+            text-align: center;
+            font-family: "GraphikRegular", "myriadProReg";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 50px; /* 125% */
+
+            @include tab {
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            @include mobile {
+                font-size: 22px;
+                line-height: 35px;
+            }
+        }
+    }
+}

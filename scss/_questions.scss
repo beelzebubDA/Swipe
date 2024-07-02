@@ -1,0 +1,284 @@
+.questions {
+    background-color: #fff;
+    padding-top: 440px;
+    padding-bottom: 225px;
+
+    @include tab {
+        padding-top: 200px;
+        padding-bottom: 150px;
+    }
+
+    @include mobile {
+        padding: 100px 0;
+    }
+}
+.questions {
+
+    &_Mtitle {
+        color: #100E2D;
+        text-align: center;
+        font-family: "Unbounded-Medium";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @include tab {
+            font-size: 40px;
+        }
+
+        @include mobile {
+            font-size: 27px;
+        }
+    }
+
+    &_sides {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        padding-top: 95px;
+        gap: 24px;
+
+        @include mobile {
+            padding-top: 40px;
+        }
+    }
+
+    &_L {
+        width: calc(35% - 12px);
+        position: relative;
+
+        @include tab {
+            width: calc(40% - 12px);
+            display: flex;
+            align-items: start;
+            justify-content: end;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 416px;
+            height: 733px;
+            border-radius: 40px;
+            position: absolute;
+            z-index: 3;
+            top: -9px;
+            left: -10px;
+            background-color: #B3C5FE;
+
+            @include tab {
+                width: 287px;
+                height: 704px;
+                top: -5px;
+                left: -7px;
+            }
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 416px;
+            height: 733px;
+            border-radius: 40px;
+            position: absolute;
+            z-index: 2;
+            top: -17px;
+            left: -20px;
+            opacity: 0.5;
+            background-color: #B3C5FE;
+
+            @include tab {
+                width: 287px;
+                height: 704px;
+                top: -10px;
+                left: -13px;
+            }
+        }
+
+        .questions_bj{
+            display: block;
+            position: absolute;
+            top: -25px;
+            left: -29px;
+            background-color: #B3C5FE;
+            width: 416px;
+            height: 733px;
+            border-radius: 40px;
+            z-index: 1;
+            opacity: 0.5;
+
+            @include tab {
+                width: 287px;
+                height: 704px;
+                top: -17px;
+                left: -20px;
+            }
+        }
+    }
+
+    &_Pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        background: #C6B3FF;
+        padding-top: 73px;
+        position: relative;
+        z-index: 4;
+        max-width: 416px;
+
+        @include tab {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 70%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &_R {
+        width: calc(70% - 12px);
+
+        @include tab {
+            width: calc(60% - 12px);
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &_Items {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 16px;
+        width: 100%;
+
+        @include mobile {
+            gap: 8px;
+        }
+    }
+
+    &_Item {
+        background-color: rgba(246, 243, 248, 0.79);
+        border-radius: 20px;
+        width: 100%;
+        transition: .3s background ease;
+
+        &.active {
+            background-color: #B3C5FE;
+
+            .questions_title {
+
+                .minusSvg {
+                    display: flex;
+                }
+                .plusSvg {
+                    display: none;
+                }
+            }
+            .questions_text{
+                // display: block;
+                padding-top: 18px;
+            }
+        }
+
+        .questions_title {
+            color: #000;
+            font-family: "Unbounded-SemiBold";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            width: 100%;
+            display: block;
+            padding: 28px 23px;
+            text-align: start;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include tab {
+                font-size: 16px;
+                padding: 16px 20px;
+                gap: 10px;
+            }
+
+            @include mobile {
+                padding: 25px 24px;
+                gap: 8px;
+            }
+
+            &:hover {
+                .minusSvg {
+                    background: linear-gradient(90deg, #5F53BE 0%, #905AA8 18.74%, #D2638D 39.17%, #DF8D84 66.08%, #E29A82 85.2%, #E9C07D 98.36%);
+                }
+                .plusSvg {
+                    background: linear-gradient(90deg, #5F53BE 0%, #905AA8 18.74%, #D2638D 39.17%, #DF8D84 66.08%, #E29A82 85.2%, #E9C07D 98.36%);
+                }
+            }
+            .minusSvg {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background-color: #100E2D;
+                display: none;
+                align-items: center;
+                justify-content: center;
+
+                @include tab{
+                    min-width: 44px;
+                    min-height: 44px;
+                }
+            }
+
+            .plusSvg {
+                display: flex;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background-color: #100E2D;
+                align-items: center;
+                justify-content: center;
+
+                @include tab{
+                    min-width: 44px;
+                    min-height: 44px;
+                }
+            }
+        }
+    }
+
+    &_text {
+        color: #000;
+        font-family: "GraphikRegular", "myriadProReg";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        display: none;
+        padding: 28px 23px 32px 23px;
+
+        @include tab {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 28px 20px 32px 20px;
+        }
+
+        @include mobile {
+            padding-top: 0px !important;
+            line-height: 21px;
+        }
+    }
+}

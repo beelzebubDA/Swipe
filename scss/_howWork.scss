@@ -1,0 +1,285 @@
+.howWork_block {}
+
+.howWork_items {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    align-items: start;
+    justify-content: start;
+
+    @include tab {
+        gap: 60px;
+    }
+
+    @include mobile {
+        gap: 100px;
+    }
+}
+
+.howWork_item {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    &.scndItem{
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+
+        .howWork_item-L__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+
+            @include mobile {
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .howWork_item-L__item {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 294px;
+                height: 294px;
+                border-radius: 40px;
+                backdrop-filter: blur(19px);
+                position: relative;
+
+
+                @include tab {
+                    width: 165px;
+                    height: 165px;
+                    gap: 10px;
+                }
+
+                @include mobile {
+                    gap: 8px;
+                }
+
+                .bj{
+                    position: absolute;
+                    width: 294px;
+                    height: 294px;
+                    border-radius: 40px;
+                    backdrop-filter: blur(19px);
+                    opacity: 0.5;
+                    top: -12px;
+                    left: -12px;
+                    z-index: -3;
+
+                    @include tab {
+                        width: 165px;
+                        height: 165px;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 294px;
+                    height: 294px;
+                    border-radius: 40px;
+                    backdrop-filter: blur(19px);
+                    opacity: 0.5;
+                    position: absolute;
+                    z-index: -1;
+                    top: -4px;
+                    left: -4px;
+
+                    @include tab {
+                        width: 165px;
+                        height: 165px;
+                    }
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 294px;
+                    height: 294px;
+                    border-radius: 40px;
+                    backdrop-filter: blur(19px);
+                    position: absolute;
+                    z-index: -2;
+                    top: -8px;
+                    left: -8px;
+                    opacity: 0.5;
+
+                    @include tab {
+                        width: 165px;
+                        height: 165px;
+                    }
+                }
+
+                &:nth-of-type(1) {
+                    background:#C6B3FF;
+                }
+                &:nth-of-type(2) {
+                    background:#EAC7DF;
+                }
+                &:nth-of-type(3) {
+                    background:#B3C5FE;
+                }
+                &:nth-of-type(4) {
+                    background:#FFC6B5;
+                }
+            }
+        }
+
+        .howWork_item-L__item-info {
+            color: #000;
+            font-family: "Unbounded-SemiBold";
+            font-size: 37px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            @include tab {
+                font-size: 24px;
+            }
+        }
+
+        .howWork_item-L__item-span {
+            color: #100E2D;
+            text-align: center;
+            font-family: "GraphikRegular", "myriadProReg";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 31px;
+            display: block;
+            width: 70%;
+
+            @include tab {
+                width: 80%;
+                font-weight: 400;
+                line-height: 20px;
+                font-size: 16px;
+            }
+
+            @include mobile {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+
+
+        .howWork_item-R {
+            padding-left: 25px;
+
+            @include mobile {
+                padding-left: 0px;
+            }
+        }
+        .howWork_item-text{
+            span {
+                color: #403E57;
+            }
+
+            &:first-of-type {
+                display: block;
+                margin-bottom: 24px;
+
+                @include mobile {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.howWork_item-L {
+    width: calc(50% - 10px);
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.howWork_item-title {
+    color: #100E2D;
+    font-family: "Unbounded-SemiBold";
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 24px;
+
+    @include tab {
+        font-size: 26px;
+        padding-bottom: 16px;
+    }
+
+    @include mobile {
+        font-size: 20px;
+        padding-bottom: 16px;
+    }
+}
+
+.howWork_item-text {
+    color: #888796;
+    font-family: "GraphikRegular", "myriadProReg";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    display: block;
+    line-height: 27px; /* 135% */
+    width: 80%;
+
+    @include tab {
+        line-height: 22px;
+        font-size: 18px;
+    }
+
+    @include mobile {
+        width: 100%;
+        line-height: 26px;
+        padding-bottom: 40px;
+    }
+}
+
+.howWork_item-link {
+    margin-top: 155px;
+    padding: 14px 24px !important;
+
+    @include tab {
+        margin-top: 40px;
+    }
+
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.mainLink {}
+
+.howWork_item-R {
+    width: calc(50% - 10px);
+
+    @include mobile {
+        width: 100%;
+    }
+
+    picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        @include tab {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

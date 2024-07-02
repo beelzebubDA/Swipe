@@ -1,0 +1,204 @@
+.contacts {
+    &_block {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 68px 0;
+        padding: 130px 0 160px 0;
+
+        @include tab {
+            padding: 100px 0;
+            gap: 30px;
+            
+            .mainTitle {
+                font-size: 36px;
+            }
+        }
+
+        @include mobile {
+            padding: 80px 0;
+            gap: 24px;
+        }
+    }
+
+    &_sides {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 24px 0;
+        width: 100%;
+    }
+
+    &_T {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        gap: 0 25px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contacts_item {
+            width: calc(50% - 12.5px);
+            height: 422px;
+
+            @include tab {
+                height: 360px;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    &_item {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 24px 0;
+        width: 100%;
+        padding: 32px 40px 48px 56px;
+        border-radius: 40px;
+        background:rgba(246, 243, 248, 0.79);
+        width: 100%;
+
+        @include tab {
+            padding: 25px 25px 30px 25px;
+        }
+    }
+
+    &_item-T {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 4px 0;
+        width: 100%;
+    }
+
+    &_item-svg {}
+
+    &_item-title {
+        color: #000;
+        font-family: "Unbounded-SemiBold";
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        @include tab {
+            font-size: 26px;
+        }
+    }
+
+    &_item-B {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 32px 0;
+        width: 100%;
+    }
+
+    &_item-B__item {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 4px;
+        width: 100%;
+    }
+
+    &_item-scndTitle {
+        color: #000;
+        font-family: "Unbounded-SemiBold";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &_item-span {
+        color: #000;
+        font-family: "GraphikRegular", "myriadProReg";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px; /* 165% */
+
+        @include tab {
+            font-size: 20px;
+            line-height: 24px;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &_item-link {
+        color: #000;
+        font-family: "GraphikRegular", "myriadProReg";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        border-bottom: 1px solid #000;
+
+        @include tab {
+            line-height: 24px;
+        }
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &_B {
+        .contacts_B-B {
+            flex-direction: row;
+            gap: 0 24px;
+            width: 100%;
+
+            @include mobile {
+                flex-direction: column;
+            }
+
+            .contacts_item-scndTitle {
+                line-height: 27px;
+
+                @include tab {
+                    line-height: 24px;
+                }
+            }
+
+            .contacts_item-B__item {
+                gap: 16px 0;
+                width: calc(50% - 12px);
+
+                @include mobile {
+                    width: 100%;
+                }
+            }
+
+            .mainLink{
+                padding: 8px 18px;
+
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

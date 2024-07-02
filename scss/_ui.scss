@@ -1,0 +1,232 @@
+div, a, span, p, h1, h2, h3, h4, h5, h6, ul, li, nav, * {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "GraphikRegular";
+    src: url("../fonts/GraphikRegular.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "GraphikMedium";
+    src: url("../fonts/GraphikSemibold.woff2") format("woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "myriadProReg";
+    src: url("../fonts/MYRIADPRO-REGULAR.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "myriadProSemibold";
+    src: url("../fonts/MYRIADPRO-SEMIBOLD.woff2") format("woff2");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "GraphikSemibold";
+    src: url("../fonts/GraphikMedium.woff2") format("woff2");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Unbounded-Medium";
+    src: url("../fonts/Unbounded-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Unbounded-SemiBold";
+    src: url("../fonts//Unbounded-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Unbounded-Bold";
+    src: url("../fonts//Unbounded-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+
+// media
+@mixin tab {
+    @media (max-width: 1319px) {
+        @content;
+    }
+}
+@mixin tabD {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+.container {
+    max-width: 1320px;
+    padding: 0 12px;
+    margin: 0 auto;
+
+    @include tab {
+        max-width: 768px;
+        padding: 0 10px;
+    }
+
+    @include mobile {
+        max-width: 375px;
+        min-width: 375px;
+        padding: 0 5px;
+    }
+}
+
+body {
+    background: #FAFAFB;
+    &.active {
+        overflow: hidden;
+    }
+}
+
+.main {
+    padding-top: 89px;
+    background-color: #fff;
+
+    @include mobile {
+        padding-top: 100px;
+    }
+
+    &.main_scnd_color {
+        background-color: #FAFAFB;
+    }
+}
+
+.wrapper{
+    overflow: hidden;
+}
+
+.mainTitle {
+    color: #000;
+    font-family: "Unbounded-Bold";
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    span {
+        color: #C6B3FF;
+    }
+}
+
+.scndTitle {
+    color: #000;
+    font-family: "Unbounded-SemiBold";
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.mainSubTitle {
+    color: #888796;
+    font-family: "GraphikRegular", "myriadProReg";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+}
+
+a {
+    &:hover{
+        color: #58566C !important;
+    }
+}
+
+a.mainLink {
+    border-radius: 100px;
+    background: #100E2D;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    color: #fff;
+    font-family: "GraphikMedium", "myriadProSemibold";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &:hover {
+        background: linear-gradient(90deg, #5F53BE 0%, #905AA8 18.74%, #D2638D 39.17%, #DF8D84 66.08%, #E29A82 85.2%, #E9C07D 98.36%);
+        color: #fff !important;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+
+            g {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+
+.toPrevPage {
+    color: #706E81;
+    font-family: "GraphikMedium", "myriadProSemibold";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0 8px;
+
+    .svg01 {
+        display: block;
+    }
+    .svg02 {
+        display: none;
+    }
+
+    &:hover {
+        
+        span {
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(90deg, #5F53BE 0%, #905AA8 18.74%, #D2638D 39.17%, #DF8D84 66.08%, #E29A82 85.2%, #E9C07D 98.36%);
+        }
+
+        .svg01 {
+            display: none;
+        }
+
+        .svg02 {
+            display: block;
+        }
+    }
+}
+
+@keyframes logoInfLR {
+    0% { transform: translateX(calc(-100% - 120px)); }
+    100% { transform: translateX(0)}
+}
+
+@keyframes textLineInfLR {
+    0% { transform: translateX(calc(-100% - 60px)); }
+    100% { transform: translateX(0)}
+}
+
+// @keyframes textLineInfRL {
+//     0% { transform: translateX(0); }
+//     100% { transform: translateX(calc(-100% - 60px))}
+// }

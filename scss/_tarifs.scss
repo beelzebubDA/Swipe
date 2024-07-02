@@ -1,0 +1,231 @@
+.tarifs {
+    background-color: #fff;
+    padding: 70px 0 160px 0;
+
+    @include tab {
+        padding: 100px 0;
+    }
+
+    @include mobile {
+        padding: 80px 0;
+    }
+}
+.tarifs {
+    &_block {
+
+    }
+
+    &_T {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 32px 0;
+        padding: 60px 0 65px 0;
+
+        @include tab {
+            gap: 24px 0;
+            padding: 0px 0 40px 0;
+        }
+
+        @include mobile {
+            padding: 0 0 24px 0;
+        }
+
+        .mainTitle {
+
+            @include tab {
+                font-size: 36px;
+            }
+
+            @include mobile {
+                font-size: 30px;
+            }
+        }
+
+        .mainSubTitle {
+            width: 50%;
+
+            @include tab {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            @include mobile {
+                font-size: 18px;
+                width: 85%;
+            }
+        }
+    }
+
+    &_B {
+
+    }
+
+    &_table-block {
+        padding-bottom: 65px;
+
+        @include tab {
+            padding-bottom: 40px;
+        }
+        @include mobile {
+            padding-bottom: 24px;
+        }
+        .tarifs_table {
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+
+            thead {
+
+                tr {
+                    display: flex;
+                    align-items: start;
+                    justify-content: start;
+                    gap: 24px;
+
+                    @include mobile {
+                        gap: 12px;
+                    }
+                    th {
+                        width: 415px;
+                        display: flex;
+                        align-items: start;
+                        justify-content: start;
+                        color: #100E2D;
+                        font-family: "Unbounded-Medium";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+
+                        @include mobile {
+                            width: 30%;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            
+            tbody {
+                display: flex;
+                flex-direction: column;
+                gap: 32px 0;
+
+                tr {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    gap: 0 24px;
+
+                    @include tab {
+                        gap: 0 12px;
+                    }
+                    td {
+                        width: 415px;
+
+                        @include mobile {
+                            width: 30%;
+                        }
+                    }
+                }
+
+                .doubleSpan {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                    gap: 8px 0;
+
+                    @include mobile {
+                        gap: 4px 0;
+                    }
+                    span {
+                        color: #888796;
+                        font-family: "GraphikRegular", "myriadProReg";
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 21px;
+
+                        @include mobile{
+                            font-size: 10px;
+                            line-height: 10px;
+                        }
+                    }
+
+                    .spanPrice{
+                        color: #100E2D;
+                        font-family: "Unbounded-SemiBold";
+                        font-size: 37px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+
+                        @include tab {
+                            font-size: 30px;
+                        }
+
+                        @include mobile {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .frstTd {
+                color: #100E2D;
+                font-family: "Unbounded-Medium";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                position: relative;
+
+                @include tab {
+                    font-size: 20px;
+                }
+
+                span {
+                    position: relative;
+                    z-index: 2;
+                    padding: 31px 24px;
+                    display: block;
+                    width: 80%;
+
+                    @include mobile {
+                        padding: 0;
+                        font-size: 10px;
+                    }
+                }
+
+                svg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+
+                    @include tab {
+                        width: 95%;
+                    }
+
+                    @include mobile {
+                        top: -200%;
+                        left: -3%;
+                    }
+                }
+            }
+
+            .doubleSpan {}
+        }
+    }
+
+    &_link {
+        font-size: 20px !important;
+
+        @include mobile {
+            width: 100%;
+            font-size: 16px !important;
+            padding: 10px 12px !important;
+        }
+    }
+}

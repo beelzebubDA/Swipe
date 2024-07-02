@@ -1,0 +1,102 @@
+.patreons {
+    overflow: hidden;
+    padding-bottom: 170px;
+
+    @include tab {
+        padding-bottom: 100px;
+    }
+    &_block {
+        overflow: hidden;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        min-width: 100%;
+        gap: 0 120px;
+
+        @include mobile {
+            margin-bottom: 0px;
+        }
+    }
+
+    &_lists {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 120px;
+        animation: logoInfLR 15s linear infinite;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+
+    .swipeLines {
+        display: flex;
+        align-items: center;
+        background:#100E2D;
+        padding: 12px 0;
+        min-width: 100%;
+        gap: 0 60px;
+        position: relative;
+        z-index: 1;
+
+        &.white {
+            background-color: #FFF;
+            z-index: 2;
+            box-shadow: 0px 1px 7px 1px rgba(16, 14, 45, 0.05);
+            transform: rotate(356.5deg);
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                background-color: #fff;
+                height: 46px;
+                width: 10%;
+                right: -9.9%;
+                top: 0;
+            }
+
+            .swipeLine {
+                span {
+                    color: #19073F;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        .swipeLine{
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            animation: textLineInfLR 15s linear infinite;
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 60px;
+                min-width: max-content;
+                color: #FFF;
+                font-family: "Unbounded-SemiBold";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+
+                @include mobile{
+                    font-size: 14px;
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 6px;
+                    height: 6px;
+                    background-color: #FFB3E3;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

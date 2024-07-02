@@ -1,0 +1,540 @@
+.CourseLib {
+    padding-top: 95px;
+
+    @include tab {
+        padding-top: 80px;
+    }
+    @include mobile {
+        padding-top: 60px;
+    }
+}
+
+.CourseLib_block {
+    display: flex;
+    flex-direction: column;
+    gap: 50px 0;
+
+    @include tab {
+        gap: 24px;
+    }
+
+    @include mobile {
+        gap: 16px;
+    }
+}
+
+.CourseLib_T{
+    .CourseLib_T-sides {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 70px;
+
+        @include tab {
+            gap: 40px;
+        }
+
+        @include mobile {
+            flex-direction: column-reverse;
+            gap: 24px;
+        }
+
+        .CourseLib_T-L {
+            width: calc(60% - 35px);
+
+            @include tab {
+                width: calc(60% - 20px);
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+
+            .CourseLib_T-title {
+                padding: 37px 0 32px 0;
+
+                @include tab {
+                    padding: 0 0 24px 0;
+                    font-size: 36px;
+                }
+
+                @include mobile {
+                    padding: 0 0 16px 0;
+                    font-size: 30px;
+                }
+            }
+
+            .CourseLib_T-subTitle {
+                padding-bottom: 64px;
+                width: 70%;
+
+                @include tab {
+                    padding-bottom: 30px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    width: 100%;
+                }
+            }
+
+            .CourseLib_T-search {
+                outline: none;
+                border: none;
+                width: 100%;
+                border-bottom: 2px solid #100E2D;
+                background-color: transparent;
+                padding-bottom: 10px;
+                padding-left: 32px;
+                color: #888796;
+                font-family: "GraphikRegular", "myriadProReg";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                position: relative;
+
+                &:focus {
+                    border-color: #C6B3FF;
+                    color: #282642;
+                }
+            }
+
+            .CourseLib_T-searchItem {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url(../imgs/searchIcon.svg);
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                }
+            }
+
+            .CourseLib_T-items {
+                padding-top: 32px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+
+                @include mobile {
+                    padding-top: 20px;
+                }
+            }
+        }
+        .CourseLib_T-R {
+            width: calc(40% - 35px);
+
+            @include tab {
+                width: calc(40% - 20px);
+            }
+        }
+    }
+}
+
+.CourseLib_T-link {
+    color: #100E2D;
+    font-family: "GraphikRegular", "myriadProReg";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background-color: #F0F0F2;
+    border: 1px solid #FFF;
+
+    @include tab {
+        padding: 10px 14px;
+    }
+
+    @include mobile {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+
+    &.active {
+        background-color: #B4ECFF;
+    }
+
+    &:hover {
+        background-color: #d5b4ff;
+    }
+}
+
+.CourseLib_T-R {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    position: relative;
+
+    @include mobile {
+        display: none;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: -15px;
+        right: 15px;
+        opacity: 0.5;
+        background-color: #C6B3FF;
+        width: 504px;
+        height: 554px;
+        backdrop-filter: blur(19px);
+        border-radius: 40px;
+
+        @include tab {
+            width: 182px;
+            height: 485px;
+            right: 6%;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 3;
+        top: -8px;
+        right: 8px;
+        opacity: 0.5;
+        background-color: #C6B3FF;
+        width: 504px;
+        height: 554px;
+        backdrop-filter: blur(19px);
+        border-radius: 40px;
+
+        @include tab {
+            width: 182px;
+            height: 485px;
+            right: 3%;
+        }
+    }
+
+    .CourseLib_T-bj {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: -23px;
+        right: 22px;
+        opacity: 0.5;
+        background-color: #C6B3FF;
+        width: 504px;
+        height: 554px;
+        backdrop-filter: blur(19px);
+        border-radius: 40px;
+
+        @include tab {
+            width: 182px;
+            height: 485px;
+            right: 9%;
+        }
+    }
+
+    .CourseLib_T-img {
+        border-radius: 40px;
+        background: #C6B3FF;
+        backdrop-filter: blur(19px);
+        min-width: 504px;
+        padding: 32px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 4;
+
+        @include tab {
+            width: 65%;
+            height: 100%;
+            display: block;
+            min-width: auto;
+            padding: 15px 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+.CourseLib_B {
+    background-color: #FFF;
+    border-radius: 50px 50px 0 0;
+    padding: 60px 0 160px 0;
+
+    @include tab {
+        padding: 50px 0 100px 0;
+    }
+
+    @include mobile {
+        padding: 30px 0 80px 0;
+    }
+}
+
+.CourseLib_B-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: start;
+    justify-content: start;
+
+    @include mobile {
+        gap: 16px;
+        justify-content: center;
+    }
+}
+
+.CourseLib_B-item {
+    padding: 32px 32px 24px 32px;
+    width: 416px;
+    max-width: 416px;
+    height: 518px;
+    max-height: 518px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+
+    .CourseLib_B-item_bg {
+        position: absolute;
+        width: 416px;
+        max-width: 416px;
+        height: 518px;
+        max-height: 518px;
+        display: none;
+        top: -5px;
+        left: -5px;
+        z-index: 3;
+        border-radius: 20px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 416px;
+        max-width: 416px;
+        height: 518px;
+        max-height: 518px;
+        display: none;
+        top: -8px;
+        left: -8px;
+        z-index: 2;
+        border-radius: 20px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 416px;
+        max-width: 416px;
+        height: 518px;
+        max-height: 518px;
+        display: none;
+        top: -12px;
+        left: -12px;
+        z-index: 1;
+        border-radius: 20px;
+    }
+
+    @include tab {
+        width: 350px;
+        height: 420px;
+        padding: 25px 25px 20px 25px;
+    }
+
+    &:hover {
+        transition: all 0.5s ease-in-out;
+        .CourseLib_B-subtitle {
+            display: block;
+            opacity: 1;
+        }
+        .CourseLib_B-item_bg {
+            display: block;
+
+            @include tab {
+                width: 350px;
+                height: 420px;
+            }
+        }
+        &::after {
+            display: block;
+
+            @include tab {
+                width: 350px;
+                height: 420px;
+            }
+        }
+        &::before {
+            display: block;
+
+            @include tab {
+                width: 350px;
+                height: 420px;
+            }
+        }
+    }
+
+    &.discus {
+        background-color: #C6B3FF;
+
+        .CourseLib_B-item_bg {
+            background-color: rgba(198, 179, 255, 0.5);
+        }
+        &::after {
+            background-color: rgba(198, 179, 255, 0.5);
+        }
+        &::before {
+            background-color: rgba(198, 179, 255, 0.3);
+        }
+    }
+    &.softSkill {
+        background-color: #EAC7DF;
+        
+        .CourseLib_B-item_bg {
+            background-color: rgba(234, 200, 223, 0.5);
+        }
+        &::after {
+            background-color: rgba(234, 200, 223, 0.5);
+        }
+        &::before {
+            background-color: rgba(234, 200, 223, 0.4);
+        }
+    }
+    &.standart {
+        background-color: #B3C5FE;
+        
+        .CourseLib_B-item_bg {
+            background-color: rgba(180, 197, 254, 0.5);
+        }
+        &::after {
+            background-color: rgba(180, 197, 254, 0.5);
+        }
+        &::before {
+            background-color: rgba(180, 197, 254, 0.4);
+        }
+    }
+    &.selling {
+        background-color: #B4ECFF;
+        
+        .CourseLib_B-item_bg {
+            background-color: rgba(179, 236, 255, 0.5);
+        }
+        &::after {
+            background-color: rgba(179, 236, 255, 0.5);
+        }
+        &::before {
+            background-color: rgba(179, 236, 255, 0.4);
+        }
+    }
+    &.callCenter{
+        background-color: #FFECB3;
+        
+        .CourseLib_B-item_bg {
+            background-color: rgba(255, 236, 179, 0.5);
+        }
+        &::after {
+            background-color: rgba(255, 236, 179, 0.5);
+        }
+        &::before {
+            background-color: rgba(255, 236, 179, 0.4);
+        }
+    }
+    &.menejment {
+        background-color: #FFC6B5;
+        
+        .CourseLib_B-item_bg {
+            background-color: rgb(255, 198, 181, 0.5);
+        }
+        &::after {
+            background-color: rgb(255, 198, 181, 0.5);
+        }
+        &::before {
+            background-color: rgb(255, 198, 181, 0.4);
+        }
+    }
+}
+
+.CourseLib_B-T {
+    position: relative;
+    z-index: 4;
+}
+
+.CourseLib_B-item__name {
+    display: block;
+    padding: 10px 16px;
+    color:#100E2D;
+    font-family: "GraphikRegular", "myriadProReg";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    background: rgba(255, 255, 255, 0.25);
+
+    @include tab {
+        padding: 10px 14px;
+    }
+
+    @include mobile {
+        padding: 8px 10px;
+    }
+}
+
+.CourseLib_B-B {
+    width: 100%;
+    position: relative;
+    z-index: 4;
+}
+
+.CourseLib_B-title {
+    color:#100E2D;
+    font-family: "Unbounded-Medium";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+
+    @include tab {
+        font-size: 20px;
+    }
+}
+
+.CourseLib_B-subtitle {
+    display: none;
+    color: #000;
+    font-family: "GraphikRegular", "myriadProReg";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin-top: 16px;
+    width: 80%;
+    opacity: 0;
+}
+
+.CourseLib_B-link {
+    color: #100E2D;
+    font-family: "GraphikMedium", "myriadProSemibold";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid #100E2D;
+    margin-top: 24px;
+    width: 100%;
+}

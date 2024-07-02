@@ -1,0 +1,57 @@
+
+.header404 {
+    .header_L {
+        background-color: transparent;
+    }
+}
+
+.Patreons404{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 107px);
+
+    .swipeLines{
+        position: absolute;
+        top: 20%;
+        left: 0;
+        transform: rotate(356.5deg);
+        .swipeLine {
+            span {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .Patreons404_block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 60px 0;
+        position: relative;
+        top: 19%;
+
+        @include mobile {
+            gap: 140px;
+        }
+
+        .mainLink {
+            font-size: 20px;
+        }
+    }
+
+    .Patreons404_title {
+        color: #C6B3FF;
+        font-family: "Unbounded-SemiBold";
+        font-size: 160px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        @include mobile {
+            font-size: 100px;
+        }
+    }
+
+    .Patreons404_link {}
+}

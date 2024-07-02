@@ -1,0 +1,150 @@
+.hero {
+    &_block {
+        padding: 60px 0 50px 0;
+
+        @include tab {
+            padding: 50px 0;
+        }
+
+        @include mobile {
+            padding: 30px 0 70px 0;
+        }
+    }
+
+    &_sides {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+        @include mobile {
+            flex-direction: column-reverse;
+            width: 100%;
+        }
+
+        .mainTitle {
+            margin-bottom: 32px;
+
+            @include tab {
+                font-size: 26px;
+                margin-bottom: 25px;
+            }
+
+            @include mobile {
+                font-size: 25px;
+                margin-bottom: 24px;
+            }
+        }
+
+        .mainSubTitle {
+            margin-bottom: 118px;
+
+            @include tab{
+                margin-bottom: 40px;
+                font-size: 20px;
+            }
+
+            @include mobile {
+                line-height: 28px;
+                margin-bottom: 55px;
+            }
+        }
+
+        .mainLink {}
+
+        .arrowWhite {}
+
+        .heroImg01{
+            transition: 1s all ease;
+            position: absolute;
+            transform-origin: center;
+            transform: rotateY(0deg);
+            opacity: 1;
+            z-index: 2;
+            display: flex;
+
+            @include tab {
+                display: none;
+            }
+        }
+
+        .heroImg02 {
+            transition: 1s all ease;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            display: flex;
+
+            @include tab {
+                display: none;
+            }
+        }
+
+        .heroImg03 {
+            display: none;
+            position: absolute;
+            transform-origin: center;
+            transform: rotateY(0deg);
+            opacity: 1;
+            z-index: 2;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+
+            @include tab {
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+
+            @include mobile {
+                justify-content: center;
+
+                img {
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+        }
+
+    }
+
+    &_L {
+        width: 60%;
+
+        @include tab {
+            width: 50%;
+        }
+
+        @include mobile {
+            width: 100%;
+            padding-top: 20px;
+        }
+    }
+
+    &_link {
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &_R {
+        width: 40%;
+        position: relative;
+        min-height: 615px;
+
+        @include tab {
+            width: 50%;
+            min-height: 400px;
+        }
+
+        @include mobile {
+            width: 100%;
+            min-height: 350px;
+        }
+    }
+}

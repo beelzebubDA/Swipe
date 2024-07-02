@@ -1,0 +1,298 @@
+.reviews {
+    background-color: #fff;
+
+    .container {
+        &.swiper-container {
+            max-width: 1440px;
+            padding: 0;
+        }
+    }
+}
+
+.mainLink {}
+
+.reviews {
+
+    &.fixed {
+        width: 100vw;
+        height: 100vh;
+    }
+    &_block {
+        position: relative;
+
+        .reviews_main-bj {
+            position: absolute;
+            top: 120px;
+            left: 30%;
+
+            @include tab {
+                width: 70%;
+                height: 90%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            @include mobile {
+                height: 100%;
+                width: 87%;
+                top: -99px;
+                left: 10%;
+            }
+        }
+    }
+
+    &_title {
+        color: #100E2D;
+        text-align: center;
+        font-family: "Unbounded-Medium";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding-bottom: 70px;
+
+        @include tab {
+            font-size: 40px;
+        }
+
+        @include mobile {
+            font-size: 27px;
+        }
+    }
+
+    &_swiper {
+
+        &.fixed {
+            overflow: visible;
+            
+        }
+        .reviewsS {
+
+            &-items {
+                padding: 20px 0;
+
+                @include tab {
+                    padding: 10px 0 10px 10px;
+                }
+
+                @include mobile {
+                    padding: 10px 0 70px 10px;
+                }
+            }
+
+            &-item {
+                background-color: rgba(246, 243, 248, 0.79);
+                stroke-width: 1px;
+                stroke: #FFF;
+                transform: rotate(1deg);
+                padding: 43px 26px 20px 25px;
+                border-radius: 32px;
+                position: relative;
+                min-height: 314px;
+                backdrop-filter: blur(15.5px);
+
+                @include mobile {
+                    padding: 30px;
+                    min-height: 470px;
+                }
+
+                .reviewsS-item__quotes{
+                    position: absolute;
+                    top: 42px;
+                    right: 60%;
+
+                    @include mobile {
+                        top: 35px;
+                        right: 10%;
+                    }
+                }
+
+                &.pink {
+                    .reviewsS-item__L {
+
+                        &::before {
+                            background-color: #EAC7DF;
+                        }
+                        &::after {
+                            background-color: #EAC7DF;
+                        }
+                        .reviewsS-item__bj{
+                            background-color: #EAC7DF;
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination {
+            &.reviewsS_pagination {
+                display: none;
+
+                @include mobile {
+                    display: block;
+                }
+            }
+        }
+
+        .swiper-pagination-bullet {
+
+            transition: all 0.3s ease-in-out;
+
+            &.swiper-pagination-bullet-active {
+                background-color: #C6B3FF;
+                width: 40px;
+                border-radius: 100px;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &S-item__sides {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 0 10px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &S-item__L {
+        width: calc(40% - 5px);
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        position: relative;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 67px;
+            height: 67px;
+            position: absolute;
+            background-color: #C6B3FF;
+            border-radius: 50%;
+            z-index: 2;
+            left: 5px;
+            top: 0px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 67px;
+            height: 67px;
+            position: absolute;
+            background-color: #C6B3FF;
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0.5;
+            left: 8px;
+            top: -3px;
+        }
+
+        .reviewsS-item__bj{
+            position: absolute;
+            width: 67px;
+            height: 67px;
+            background-color: #C6B3FF;
+            opacity: 0.5;
+            border-radius: 50%;
+            top: -6px;
+            left: 11px;
+        }
+    }
+
+    &S-item__img {
+        position: relative;
+        z-index: 3;
+    }
+
+    &S-item__name {
+        color:#100E2D;
+        font-family: "Unbounded-SemiBold";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 5px 0 1px 0;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &S-item__job {
+        color: #888796;
+        font-family: "GraphikMedium", "myriadProSemibold";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &S-item__R {
+        width: calc(60% - 5px);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 15px 0;
+
+        @include mobile {
+            width: 100%;
+            gap: 24px;
+        }
+    }
+
+    &S-item__text {
+        color: #100E2D;
+        font-family: "GraphikRegular", "myriadProReg";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+
+        @include tab {
+            font-size: 18px;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    &S-item__btn {
+        &.mainLink {
+            padding: 12px 24px;
+            font-family: "GraphikMedium", "myriadProSemibold";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+}

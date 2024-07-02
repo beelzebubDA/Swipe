@@ -1,0 +1,155 @@
+.modal_block {
+    display: none;
+    &.fixed {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-dialog{
+        display: flex;
+        background-color: #fff;
+        position: relative;
+        width: 50%;
+        top: 45%;
+        left: 25%;
+        border-radius: 40px;
+
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px 10px;
+        }
+
+        .modal-title {
+            font-size: 40px;
+        }
+
+        .modal_close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 40px;
+        }
+        
+        .modal-body {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+// reviews modal
+
+.reviews {
+    &_modal_block {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 10;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &_modal-dialog {
+        display: flex;
+        background-color: #fff;
+        width: 60%;
+        border-radius: 20px;
+        padding: 40px 60px 70px 60px;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+            width: 90%;
+            padding: 20px 30px 50px 30px;
+        }
+    }
+
+    &_modal-picture {}
+}
+
+.modal {
+    &-content {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    &-title {
+        color:#100E2D;
+        font-family: "Unbounded-SemiBold";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 5px 0 1px 0;
+
+        @include mobile {
+            font-size: 18px;
+            padding-bottom: 5px;
+        }
+    }
+
+    &-subtitle {
+        color: #888796;
+        font-family: "GraphikMedium", "myriadProSemibold";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &_closeRev {
+        position: absolute;
+        top: -35px;
+        right: -40px;
+        font-size: 40px;
+        color: black;
+
+        @include mobile {
+            top: -15px;
+            right: -15px;
+        }
+    }
+
+    &-body {}
+
+    &-text {
+        color: #100E2D;
+        font-family: "GraphikRegular", "myriadProReg";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+    }
+}
